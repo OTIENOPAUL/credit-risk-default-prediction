@@ -28,6 +28,6 @@ The app loads `credit_risk_lgb_model.pkl` and `model_features.pkl` from the proj
 
 ## Live demo
 
-<a href="https://your-streamlit-app-url.streamlit.app" target="_blank" class="btn btn-primary">
+<a href="https://credit-risk-default-prediction-op.streamlit.app/" target="_blank" class="btn btn-primary">
   🚀 Launch Live Underwriting Simulator
 </a>

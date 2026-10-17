@@ -13,7 +13,3 @@ An end-to-end machine learning pipeline and predictive underwriting engine built
   * **Gini Coefficient:** `0.5301`
   * **PR-AUC:** `0.2454`
 * **Regulatory Compliance:** Audited via SHAP (SHapley Additive exPlanations) to provide local feature attribution and human-understandable adverse action reason codes.
-
----
-
-## 🏗️ End-to-End Architecture & Operational Workflow

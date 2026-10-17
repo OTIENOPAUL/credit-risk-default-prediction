@@ -1,15 +1,27 @@
-# Enterprise Credit Risk Scoring & Default Prediction Engine
+# Home Credit Default Risk Prediction
 
-An end-to-end machine learning pipeline and predictive underwriting engine built using the **Home Credit Default Risk** dataset. This project addresses the dual operational challenges of high non-performing loan (NPL) rates and the exclusion of "thin-file" retail borrowers by replacing legacy rule-based scorecards with a high-performance gradient-boosting model.
+A machine learning project for estimating the risk of payment difficulties on consumer loan applications. The work uses the Home Credit Default Risk competition data and includes a notebook, a Streamlit app, and saved model artifacts.
 
----
+## Dataset
 
-## 📊 Executive Summary & Key Metrics
+Download the competition files from [Kaggle: Home Credit Default Risk](https://www.kaggle.com/competitions/home-credit-default-risk/data). A Kaggle account and acceptance of the competition rules may be required. Place the downloaded CSV files in a `data/` directory before running the notebook or any workflow that reads the source data.
 
-* **Business Objective:** Transition from manual, lagging credit reviews to a real-time, data-driven underwriting engine that predicts probability of default (PD) while minimizing false negatives and credit losses.
-* **Algorithm:** Regularized LightGBM (Gradient Boosting Decision Trees) with native categorical encoding and early stopping.
-* **Key Validation Metrics:**
-  * **ROC-AUC:** `0.7651`
-  * **Gini Coefficient:** `0.5301`
-  * **PR-AUC:** `0.2454`
-* **Regulatory Compliance:** Audited via SHAP (SHapley Additive exPlanations) to provide local feature attribution and human-understandable adverse action reason codes.
+The main training target is `TARGET` in `application_train.csv` (`1` indicates payment difficulties; `0` indicates no recorded difficulties). The project may use additional competition tables for applicant history and features.
+
+## Run the app
+
+Install dependencies and start Streamlit:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The app loads `credit_risk_lgb_model.pkl` and `model_features.pkl` from the project root.
+
+## Project files
+
+- `Credit_Default_Risk.ipynb` — analysis and modeling notebook
+- `app.py` — Streamlit scoring interface
+- `credit_risk_lgb_model.pkl`, `model_features.pkl` — saved model and feature schema
+- `data/` — downloaded Kaggle data (not included in this repository)

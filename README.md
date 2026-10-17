@@ -25,3 +25,9 @@ The app loads `credit_risk_lgb_model.pkl` and `model_features.pkl` from the proj
 - `app.py` — Streamlit scoring interface
 - `credit_risk_lgb_model.pkl`, `model_features.pkl` — saved model and feature schema
 - `data/` — downloaded Kaggle data (not included in this repository)
+
+## Live demo
+
+<a href="https://your-streamlit-app-url.streamlit.app" target="_blank" class="btn btn-primary">
+  🚀 Launch Live Underwriting Simulator
+</a>
